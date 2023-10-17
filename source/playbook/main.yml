@@ -1,0 +1,16 @@
+---
+
+- hosts: deploy_kustomize_manifest
+  become: true
+  become_method: sudo
+  become_user: root
+  any_errors_fatal: true
+  gather_facts: true
+  run_once: "{{ kustomize_manifest_run_once | default(true) }}"
+  tasks:
+    - include_role:
+        name: kustomize
+  environment:
+    http_proxy: "{{ http_proxy | default('') }}"
+    https_proxy: "{{ https_proxy | default('') }}"
+    no_proxy: "{{ no_proxy | default('') }}"

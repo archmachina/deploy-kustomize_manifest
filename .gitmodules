@@ -1,0 +1,9 @@
+[submodule "source/playbook/exec"]
+	path = source/playbook/exec
+	url = https://github.com/archmachina/cicd-exec
+[submodule "exec"]
+	path = exec
+	url = https://github.com/archmachina/cicd-exec
+[submodule "source/playbook/roles/kustomize"]
+	path = source/playbook/roles/kustomize
+	url = https://github.com/archmachina/ansible-role-kustomize
